@@ -22,7 +22,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
 
     Context context;
     List<DataItem> data;
-    public static final String WebUrl = "http://192.168.10.52./GitRetrofit/";
+    public static final String WebUrl = "http://192.168.10.52/GitRetrofit/";
 
     public CustomAdapter(Context context, List<DataItem> dataItems) {
         this.context = context;
@@ -63,7 +63,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
 
             name = itemView.findViewById(R.id.txtName);
             address = itemView.findViewById(R.id.txtAddress);
-
+            img = itemView.findViewById(R.id.image);
         }
     }
 }

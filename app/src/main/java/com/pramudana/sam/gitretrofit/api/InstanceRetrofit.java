@@ -8,7 +8,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
  */
 
 public class InstanceRetrofit {
-    public static final String webUrl = "http://192.168.10.52./GitRetrofit/";
+    public static final String webUrl = "http://192.168.10.52/GitRetrofit/";
 
     public static Retrofit setInit() {
         return new Retrofit.Builder()

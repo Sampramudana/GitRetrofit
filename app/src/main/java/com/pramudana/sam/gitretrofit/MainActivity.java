@@ -4,6 +4,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
+import android.widget.Toast;
 
 import com.pramudana.sam.gitretrofit.adapter.CustomAdapter;
 import com.pramudana.sam.gitretrofit.api.ApiService;
@@ -43,6 +45,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call<ResponseData> call, Response<ResponseData> response) {
                 Boolean status = response.body().isSuccess();
+                Toast.makeText(MainActivity.this, ""+response.body().getMessage(), Toast.LENGTH_SHORT).show();
+                Log.d("wat", response.body().getMessage());
                 if (status){
                     dataItems = response.body().getData();
                     CustomAdapter adapter = new CustomAdapter(MainActivity.this, dataItems);
